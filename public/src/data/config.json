@@ -1,0 +1,651 @@
+{
+    "generalSettings":{
+        "resolution":{
+            "height": 640,
+            "width": 450,
+            "fullscreen": false
+        },
+        "sound":{
+            "volume":50
+        },
+        "gameplay":{
+            "language": "en"
+        }
+    },
+    "configurationGame":[
+        {
+            "challenges":[
+                {
+                    "title":"moreLetters",
+                    "dificulty":"normal",
+                    "description":"algo pro"
+                }
+            ],
+            "categoryGames": [
+                {
+                    "category":"Visuals",
+                    "image":"mode_icon_1",
+                    "status":true,
+                    "description":"",
+                    "subCategories":[
+                        {
+                            "title": "Animals",
+                            "category":"Visuals",
+                            "image":"icon_animals",
+                            "config":{
+                                    "fullWord":true,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1
+                            },
+                            "words": [
+                                "CHICKEN",
+                                "HORSE",
+                                "DOG",
+                                "FOX",
+                                "RACCOON",
+                                "AXOLOTL",
+                                "RAT"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "Pokemon",
+                            "category":"Visuals",
+                            "image":"icon_pokemon",
+                            "config":{
+                                    "fullWord":true,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1,
+                                    "folder":"pokemon"
+                            },
+                            "words": [
+                                "BULBASAUR",
+                                "IVYSAUR",
+                                "VENUSAUR",
+                                "CHARMANDER",
+                                "CHARMELEON",
+                                "CHARIZARD",
+                                "SQUIRTLE",
+                                "WARTORTLE",
+                                "BLASTOISE",
+                                "PIKACHU",
+                                "RAICHU"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },{
+                            "title": "Horror Movies",
+                            "category":"Visuals",
+                            "image":"icon_horror_movies",
+                            "config":{
+                                    "fullWord":true,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1,
+                                    "folder":"horror_movies"
+                            },
+                            "words": [
+                                "HELLRAISER",
+                                "SAW",
+                                "HALLOWEEN",
+                                "NOSFERATU",
+                                "FRIDAY THE 13TH",
+                                "IT",
+                                "FRANKENSTEIN",
+                                "SCREAM",
+                                "ANNABELLE",
+                                "A NIGHTMARE ON ELM STREET",
+                                "THE INVISIBLE MAN",
+                                "JEKYL&HIDE"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },{
+                            "title": "Famous People",
+                            "category":"Visuals",
+                            "image":"icon_famous",
+                            "config":{
+                                    "fullWord":true,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1,
+                                    "folder":"famous",
+                                    "image_full":true
+                            },
+                            "words": [
+                                "MICHAEL JACKSON",
+                                "JACK NICHOLSON",
+                                "JOHN LENNON",
+                                "MARILYN MONROE",
+                                "ELVIS PRESLEY",
+                                "JOHNNY DEEP",
+                                "WILL SMITH",
+                                "CYNDI LAUPER",
+                                "DAVID BOWIE",
+                                "LADY GAGA"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },{
+                            "title": "FruitsVeggies",
+                            "category":"Visuals",
+                            "image":"icon_f_v",
+                            "config":{
+                                    "fullWord":true,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1,
+                                    "folder":"fruits"
+                            },
+                            "words": [
+                                "APPLE",
+                                "AVOCADO",
+                                "BANANA",
+                                "CARROT",
+                                "CHERRY",
+                                "CHILLI",
+                                "CORN",
+                                "KIWI",
+                                "MUSHROOM",
+                                "ONION",
+                                "ORANGE",
+                                "STRAWBERRY"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "Geometry",
+                            "category":"Visuals",
+                            "image":"icon_g_v",
+                            "config":{
+                                    "fullWord":true,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1,
+                                    "folder":"geometry"
+                            },
+                            "words": [
+                                "DIAMOND",
+                                "CUBE",
+                                "CYLINDER",
+                                "HEXAGON",
+                                "PYRAMID",
+                                "STAR",
+                                "TRAPEZE"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "Countries",
+                            "category":"Visuals",
+                            "image":"icon_country",
+                            "config":{
+                                    "fullWord":true,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1,
+                                    "folder":"countries"
+                            },
+                            "words": [
+                                "ARGENTINA",
+                                "BRAZIL",
+                                "CANADA",
+                                "CHILE",
+                                "COLOMBIA",
+                                "FRANCE",
+                                "ITALY",
+                                "MEXICO",
+                                "PERU",
+                                "SPAIN",
+                                "URUGUAY",
+                                "USA"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "Soccer Stamps",
+                            "category":"Visuals",
+                            "image":"icon_soccer",
+                            "config":{
+                                    "fullWord":true,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1,
+                                    "folder":"soccer_teams"
+                            },
+                            "words": [
+                                "GERMANY",
+                                "BRAZIL",
+                                "ECUADOR",
+                                "JAPAN",
+                                "MEXICO",
+                                "SPAIN",
+                                "UNITEDSTATES"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        }
+                    ]
+                },
+                {
+                    "category":"Numbers",
+                    "status":false,
+                    "image":"mode_icon_2",
+                    "description":"",
+                    "subCategories":[
+                        {
+                            "title": "Series",
+                            "category":"Numbers",
+                            "image":"mode_icon_2",
+                            "config":{
+                                    "fullWord":false,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1
+                            },
+                            "words": [
+                                "1234",
+                                "2345",
+                                "3456",
+                                "4567",
+                                "5678",
+                                "6789",
+                                "78910"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "Hundreds",
+                            "category":"Numbers",
+                            "image":"icon_hundred",
+                            "config":{
+                                    "fullWord":false,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1
+                            },
+                            "words": [
+                                "100",
+                                "200",
+                                "300",
+                                "400",
+                                "500",
+                                "600",
+                                "700"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "FiboShort",
+                            "category":"Numbers",
+                            "image":"icon_fibo",
+                            "config":{
+                                    "fullWord":false,
+                                    "difficulty":"easy",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1
+                            },
+                            "words": [
+                                "0112",
+                                "35813",
+                                "2134",
+                                "5589",
+                                "144233",
+                                "377610",
+                                "9871597"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        }  
+
+                    ]
+                },
+
+
+                {
+                    "category":"Letters",
+                    "status":false,
+                    "image":"mode_icon_3",
+                    "description":"",
+                    "subCategories":[
+                        {
+                            "title": "HumanBody",
+                            "category":"Letters",
+                            "image":"icon_human",
+                            "config":
+                            {
+                                "fullWord":false,
+                                "difficulty":"EASY",
+                                "timeRemaining":40,
+                                "random":false,
+                                "bonusWord":10,
+                                "point":1,
+                                "cursedWord":1
+                            }
+                            ,
+                            "words": [
+                                "ARM",
+                                "LEG",
+                                "EYE",
+                                "LUNG",
+                                "SKIN",
+                                "BONE",
+                                "HEART",
+                                "BRAIN",
+                                "MUSCLE",
+                                "LIVER",
+                                "KIDNEY",
+                                "STOMACH",
+                                "SKELETON"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "Candy",
+                            "category":"Letters",
+                            "image":"icon_candy",
+                            "config":
+                            {
+                                "fullWord":false,
+                                "difficulty":"EASY",
+                                "timeRemaining":40,
+                                "random":false,
+                                "bonusWord":10,
+                                "point":1,
+                                "cursedWord":1
+                            }
+                            ,
+                            "words": [
+
+                                "GUM",
+                                "CAKE",
+                                "SWEET",
+                                "FUDGE",
+                                "JELLY",
+                                "TOFFEE",
+                                "TRUFFLE",
+                                "BROWNIE",
+                                "CUPCAKE",
+                                "LOLLIPOP",
+                                "MARSHMALLOW",
+                                "JELLYBEAN",
+                                "BUTTERSCOTCH"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "Holidays",
+                            "category":"Letters",
+                            "image":"icon_holidays",
+                            "config":
+                            {
+                                "fullWord":false,
+                                "difficulty":"EASY",
+                                "timeRemaining":40,
+                                "random":false,
+                                "bonusWord":10,
+                                "point":1,
+                                "cursedWord":1
+                            },
+                            "words": [
+                                "CHRISTMAS",
+                                "THANKSGIVING",
+                                "HALLOWEEN",
+                                "EASTER",
+                                "NEWYEAR",
+                                "VALENTINES",
+                                "HANUKKAH",
+                                "RAMADAN",
+                                "DIWALI",
+                                "INDEPENDENCE",
+                                "VACATION",
+                                "HOLIDAY",
+                                "CELEBRATION"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "GAMER",
+                            "category":"Letters",
+                            "image":"icon_gamer",
+                            "config":
+                            {
+                                "fullWord":false,
+                                "difficulty":"EASY",
+                                "timeRemaining":40,
+                                "random":false,
+                                "bonusWord":10,
+                                "point":1,
+                                "cursedWord":1
+                            },
+                            "words": [
+                                "BOSS",
+                                "LOOT",
+                                "LEVEL",
+                                "QUEST",
+                                "PLAYER",
+                                "AVATAR",
+                                "CONSOLE",
+                                "GRAPHICS",
+                                "JOYSTICK",
+                                "GAMEPLAY",
+                                "CONTROLLER",
+                                "MULTIPLAYER",
+                                "ACHIEVEMENT"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "REDDIT",
+                            "category":"Letters",
+                            "image":"icon_reddit",
+                            "config":
+                            {
+                                "fullWord":false,
+                                "difficulty":"EASY",
+                                "timeRemaining":40,
+                                "random":false,
+                                "bonusWord":10,
+                                "point":1,
+                                "cursedWord":1
+                            },
+                            "words": [
+                                "SUB",
+                                "POST",
+                                "KARMA",
+                                "MOD",
+                                "VOTE",
+                                "THREAD",
+                                "REDDIT",
+                                "COMMENT",
+                                "UPVOTE",
+                                "DOWNVOTE",
+                                "COMMUNITY",
+                                "SUBREDDIT",
+                                "DISCUSSION"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },{
+                            "title": "Forms",
+                            "category":"Letters",
+                            "image":"icon_figures",
+                            "config":[
+                                {
+                                    "fullWord":false,
+                                    "difficulty":"EASY",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1
+                                }
+                            ],
+                            "words": [
+                                "CIRCLE",
+                                "SQUARE",
+                                "RECTANGULE",
+                                "OVAL",
+                                "PENTAGON",
+                                "DIAMOND",
+                                "HEXAGON",
+                                "HEPTAGON",
+                                "OCTAGON",
+                                "STAR",
+                                "CUBE",
+                                "CYLINDER",
+                                "CONE",
+                                "PYRAMID"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "Planets",
+                            "category":"Letters",
+                            "category":"Letters",
+                            "image":"icon_planets",
+                            "config":[
+                                {
+                                    "fullWord":false,
+                                    "difficulty":"EASY",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1
+                                }
+                            ],
+                            "words": [
+                                "MERCURY",
+                                "VENUS",
+                                "EARTH",
+                                "MARS",
+                                "JUPITER",
+                                "SATURN",
+                                "URANUS",
+                                "NEPTUNE"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        
+                        {
+                            "title": "Fruits",
+                            "category":"Letters",
+                            "image":"icon_fruits",
+                            "config":[
+                                {
+                                    "fullWord":false,
+                                    "difficulty":"EASY",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1
+                                }
+                            ],
+                            "words": [
+                                "APPLE",
+                                "BANANA",
+                                "ORANGE",
+                                "GRAPE",
+                                "STRAWBERRY",
+                                "PINEAPPLE",
+                                "WATERMELON",
+                                "MANGO",
+                                "BLUEBERRY",
+                                "PEAR",
+                                "CHERRY",
+                                "LEMON",
+                                "KIWI",
+                                "COCONUT"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        },
+                        {
+                            "title": "Weather",
+                            "category":"Letters",
+                            "image":"icon_weather",
+                            "config":[
+                                {
+                                    "fullWord":false,
+                                    "difficulty":"EASY",
+                                    "timeRemaining":30,
+                                    "random":false,
+                                    "bonusWord":5,
+                                    "point":1,
+                                    "cursedWord":1
+                                }
+                            ],
+                            "words": [
+                                "SUNNY",
+                                "CLOUDY",
+                                "RAINY",
+                                "SNOWY",
+                                "WINDY",
+                                "STORMY",
+                                "FOGGY",
+                                "HUMID",
+                                "DRY",
+                                "COLD",
+                                "ICY",
+                                "DRIZZLY",
+                                "OVERCAST"
+                            ],
+                            "findDifference":[],
+                            "status": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+

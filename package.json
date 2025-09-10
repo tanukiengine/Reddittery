@@ -1,0 +1,25 @@
+{
+  "name": "the-next-word",
+  "version": "1.0.0",
+  "description": "A game project using Phaser and Vite.",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [
+    "phaser",
+    "vite",
+    "game"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}
