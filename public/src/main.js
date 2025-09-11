@@ -9,7 +9,7 @@ import { bootLoader } from "./scenes/bootLoader.js";
 import { preloadScene } from "./scenes/preload.js";
 import { startScene } from "./scenes/startScene.js";
 import { howToPlay } from "./scenes/howtoplay.js";
-
+import { LotteryStart } from './scenes/LotteryStart.js';
 
 const game = new Phaser.Game({
     type:Phaser.WEBGL,
@@ -30,7 +30,7 @@ const game = new Phaser.Game({
         debug: false,
       },
     },
-    scene: [bootLoader,preloadScene,startScene,elements,animotions,howToPlay],
+    scene: [bootLoader,preloadScene,startScene,elements,animotions,howToPlay,LotteryStart],
 })
 
 game.scene.start('bootLoader');

@@ -1,5 +1,3 @@
-
-
 export class startScene extends Phaser.Scene{
     constructor(){
         super({key:'startScene'});
@@ -26,7 +24,7 @@ export class startScene extends Phaser.Scene{
                 .setInteractive()
                 .on("pointerdown", () => {
                     originScreen.push("loading");
-                    this.scene.start('selectModeScene');
+                    this.scene.start('lotteryStart');
                 })
             ,{scale:.25,duration:350});
         animotions.anim_swing(this,this.add.image(mid_w, mid_h+100, 'game_title').setOrigin(.5,1).setScale(default_scale),{start:mid_w+10,duration:2000});
