@@ -1,0 +1,100 @@
+{"frames": [
+
+{
+	"filename": "cactus_1",
+	"frame": {"x":351,"y":0,"w":136,"h":189},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":136,"h":189},
+	"sourceSize": {"w":136,"h":189}
+},
+{
+	"filename": "cactus_2",
+	"frame": {"x":248,"y":0,"w":39,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":54},
+	"sourceSize": {"w":39,"h":54}
+},
+{
+	"filename": "cactus_3",
+	"frame": {"x":287,"y":0,"w":64,"h":88},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":88},
+	"sourceSize": {"w":64,"h":88}
+},
+{
+	"filename": "cactus_4",
+	"frame": {"x":310,"y":189,"w":207,"h":315},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":207,"h":315},
+	"sourceSize": {"w":207,"h":315}
+},
+{
+	"filename": "cloud_1",
+	"frame": {"x":46,"y":0,"w":30,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":20},
+	"sourceSize": {"w":30,"h":20}
+},
+{
+	"filename": "cloud_2",
+	"frame": {"x":76,"y":0,"w":86,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":86,"h":21},
+	"sourceSize": {"w":86,"h":21}
+},
+{
+	"filename": "cloud_3",
+	"frame": {"x":0,"y":0,"w":46,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":19},
+	"sourceSize": {"w":46,"h":19}
+},
+{
+	"filename": "cloud_4",
+	"frame": {"x":162,"y":0,"w":86,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":86,"h":31},
+	"sourceSize": {"w":86,"h":31}
+},
+{
+	"filename": "land",
+	"frame": {"x":0,"y":504,"w":745,"h":452},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":745,"h":452},
+	"sourceSize": {"w":745,"h":452}
+},
+{
+	"filename": "sky",
+	"frame": {"x":0,"y":956,"w":739,"h":491},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":739,"h":491},
+	"sourceSize": {"w":739,"h":491}
+},
+{
+	"filename": "sun",
+	"frame": {"x":0,"y":189,"w":310,"h":306},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":310,"h":306},
+	"sourceSize": {"w":310,"h":306}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "desierto",
+	"format": "RGBA8888",
+	"size": {"w":745,"h":1447},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:4824f72ff4956aa3e9aecf7c0824c6a8:499a9fc284273976b809dec72127a587:92e762ada0988b7852e6fab0ce594b8b$"
+}
+}

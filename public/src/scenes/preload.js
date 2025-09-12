@@ -81,6 +81,11 @@ export class preloadScene extends Phaser.Scene{
             this.load.audio('success',  'assets/music/success.ogg');
             this.load.audio('mainscreen',  'assets/music/mainscreen.wav');
 
+
+            //Fondos Animados
+            this.load.atlas("desierto", "assets/ambient/desierto/desierto.png","assets/ambient/desierto/desierto.json");
+            this.load.atlas("ui", "assets/ui/ui.png","assets/ui/ui.json");
+
     }
 
 
@@ -90,8 +95,6 @@ export class preloadScene extends Phaser.Scene{
         elements.getBackground(this,"bg_main");
         elements.showBtnReturn(this,originScreen);
         this.scene.start('startScene');
-        
-
     }
 
 
