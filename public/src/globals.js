@@ -70,8 +70,31 @@ window.exampleGameConfig={"generalSettings":{"resolution":{"height": 640,"width"
 	{"category":"Numbers","image":"mode_icon_2","status":false,"description":"","subCategories":[{}]},{"category":"Visuals","image":"mode_icon_3","status":false,"description":"","subCategories":[{}]}]}]};
 
 
+window.playerStats = {
+	name: 'Akkudrak',
+	avatar: 'avatar_1',
+	score: 12345,
+	reaction: 320 // ms
+};
+
+window.sortPlayersByScoreDesc = function(players) {
+    return players.slice().sort((a, b) => b.score - a.score);
+};
+
+//usar esto para generar jugadores aleatorios, usar Redis de devvit para obtener los datos reales
+window.randomPlayers = sortPlayersByScoreDesc(Array.from({ length: 10 }, (_, i) => ({
+    name: `Player${i + 1}`,
+    avatar: `avatar_${Math.floor(Math.random() * 10) + 1}`,
+    score: Math.floor(Math.random() * (50000 - 1000 + 1)) + 1000,
+    reaction: Math.floor(Math.random() * (800 - 200 + 1)) + 200
+})));
+
+window.getPlayerByName = function(name) {
+    return window.randomPlayers.find(player => player.name === name) || null;
+};
 
 
+window.playerStatsGlobal = randomPlayers;
 
 
 //level selection

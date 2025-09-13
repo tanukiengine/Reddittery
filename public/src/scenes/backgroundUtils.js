@@ -1,7 +1,5 @@
 export function createDesertBackground(scene, width, height, mid_w, mid_h) {
     
-
-
      // Sol animado
     const sunY = mid_h;
     const sun = scene.add.sprite(0, sunY, 'desierto', 'sun').setOrigin(0.5, 0.5).setScale(1.5);

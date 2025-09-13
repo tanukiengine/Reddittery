@@ -11,16 +11,10 @@ export class howToPlay extends Phaser.Scene{
     init(data) {
         const elements = this.scene.get('elements');
         elements.drawLoadingScreen(this)
-        worldAudio.pause();
-        elements.backgroundMusic(this,'play');
+        //worldAudio.pause();
+        //elements.backgroundMusic(this,'play');
         this.actionMoment = false;
         this.buildResult = ""; 
-        // // Recibe los datos pasados desde EscenaOrigen
-        // this.words = data.words || 'Desconocido';
-        // this.lvl = data.lvl;
-        // // console.log(this.lvl);
-        // this.actionMoment = false;
-        // this.waitingForChange = false;
     }
 
     preload() {
@@ -41,7 +35,7 @@ export class howToPlay extends Phaser.Scene{
     create() {
         const elements = this.scene.get('elements');
         elements.getBackground(this,"bg_game");
-        elements.showBtnReturn(this,'','selectModeScene');
+        elements.showBtnReturn(this,'','startScene');
         if(this.sys.game.device.os.android || this.sys.game.device.os.iOS){
             this.scaleToken = 0.3;
         }else{

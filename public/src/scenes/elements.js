@@ -1,6 +1,7 @@
 
 
 export class elements extends Phaser.Scene{
+    originScreen=[];
     constructor(){
         super({key:'elements'});
     }
@@ -18,7 +19,7 @@ export class elements extends Phaser.Scene{
 
     mainModes(scene){
         originScreen=[];
-        scene.scene.start("selectModeScene");
+        scene.scene.start("startScene");
     }
 
     
@@ -31,8 +32,8 @@ export class elements extends Phaser.Scene{
 
     showBtnReturn(scene,origin,custom){//origin: a donde vamos a regresar
         scene.add.image(0+basic_padding, 0+basic_padding, 'btn_return').setOrigin(0,0).setScale(default_scale).setInteractive().on("pointerdown", () => {
-            if(scene.backgroundMusic) scene.backgroundMusic.pause();
-            if(worldAudio.play === false ){ worldAudio.play(); }
+            //if(scene.backgroundMusic) scene.backgroundMusic.pause();
+            //if(worldAudio.play === false ){ worldAudio.play(); }
             if(origin){
                 // console.log(origin);
                 scene.scene.start(originScreen[origin.length-1]);
@@ -65,7 +66,7 @@ export class elements extends Phaser.Scene{
                 }).setOrigin(0.5,0.5).setDepth(5).setInteractive().on("pointerdown", () => {
                     originScreen=[];
                     worldAudio.play();
-                    scene.scene.start("selectModeScene");
+                    scene.scene.start("startScene");
                     scene.backgroundMusic.pause();
                 })
 
