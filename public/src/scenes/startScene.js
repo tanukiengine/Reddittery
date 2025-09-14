@@ -14,7 +14,7 @@ export class startScene extends Phaser.Scene{
         const elements = this.scene.get('elements');//trae distintos elementos del juego
         const animotions = this.scene.get('animotions');//ejecuta animaciones genericas
         
-        
+        //genera el fondo animado
         createDesertBackground(this, width, height, mid_w, mid_h);
 
         const logo_redditery=this.add.sprite(mid_w, 10, 'ui', 'logo_redditery').setOrigin(.5, 0).setScale(1);

@@ -9,6 +9,7 @@ import { bootLoader } from "./scenes/bootLoader.js";
 import { preloadScene } from "./scenes/preload.js";
 import { startScene } from "./scenes/startScene.js";
 import { howToPlay } from "./scenes/howtoplay.js";
+import { countdown } from "./scenes/coutdown.js";
 
 
 const game = new Phaser.Game({
@@ -30,7 +31,7 @@ const game = new Phaser.Game({
         debug: false,
       },
     },
-    scene: [bootLoader,preloadScene,startScene,elements,animotions,howToPlay],
+    scene: [bootLoader,preloadScene,startScene,elements,animotions,howToPlay,countdown],
 })
 
 game.scene.start('bootLoader');
