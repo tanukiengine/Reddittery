@@ -25,9 +25,9 @@ export class howToPlay extends Phaser.Scene{
         const elements = this.scene.get('elements');
         elements.showBtnReturn(this, '', 'startScene');
         this.add.sprite(mid_w, 20, "ui", 'text_howto').setOrigin(.5, 0).setScale(2);
-        this.anims.create({ key : "pet_1_anim_play",frames: this.anims.generateFrameNames("pet_1_anim",{start: 1,end:4}),frameRate: 1, repeat:-1});
+        this.anims.create({ key : "pet_play",frames: this.anims.generateFrameNames("pet",{start: 1,end:4}),frameRate: 1, repeat:-1});
         var petSprite=this.physics.add.sprite(mid_w/2, mid_h+mid_h/2, "pet_1").setScale(1).setOrigin(.5,.5).setDepth(2);
-        petSprite.anims.play("pet_1_anim_play",true);
+        petSprite.anims.play("pet_play",true);
 
         // Elipse debajo del sprite
         const ellipse = this.add.graphics();
@@ -111,7 +111,7 @@ export class howToPlay extends Phaser.Scene{
                     await sleep(defaultWriteLetter);
                 }
                 if (!manualSkip) {
-                    await sleep(2000);
+                    await sleep(1500);
                     textObj.setText("");
                 } else {
                     // Espera a que el usuario haga click para pasar a la siguiente línea
@@ -126,16 +126,30 @@ export class howToPlay extends Phaser.Scene{
                 }
             }
 
-            ctx.add.sprite(skipText.x, skipText.y, "ui", 'btn_green').setOrigin(.5, .5).setScale(2).setDepth(3);
-            ctx.add.text(skipText.x, skipText.y, "Got it!", {
+            skipText.visible=false;
+            // Al finalizar todas las instrucciones, mostrar el botón "Got it!"
+            const gotItBtn=ctx.add.sprite(mid_w, mid_h, "ui", 'btn_green').setOrigin(.5, .5).setScale(2).setDepth(3).setInteractive().on('pointerdown', () => {
+                ctx.scene.start('build_board');
+            });
+            ctx.add.text(gotItBtn.x, gotItBtn.y, "Got it!", {
                 fontFamily: 'Arial',
                 fontSize: '3.5rem',
                 color: '#fff',
                 stroke: '#000',
                 strokeThickness: 10,
-            }).setOrigin(.5, .5).setDepth(4).setInteractive().on('pointerdown', () => {
-                ctx.scene.start('countdown');
+            }).setOrigin(.5, .5).setDepth(4)
+
+            const againBtn = ctx.add.sprite(gotItBtn.getTopCenter().x, gotItBtn.getTopCenter().y-50, "ui", 'btn_1').setOrigin(.5, .5).setScale(1.5).setDepth(3).setInteractive().on('pointerdown', () => {
+                ctx.scene.start('howtoPlay');
             });
+
+            ctx.add.text(againBtn.x, againBtn.y, "Replay", {
+                fontFamily: 'Arial',
+                fontSize: '2rem',
+                color: '#fff',
+                stroke: '#000',
+                strokeThickness: 10,
+            }).setOrigin(.5, .5).setDepth(4)
         }
 
         showInstructionsAsync(this);

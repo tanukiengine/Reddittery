@@ -18,11 +18,13 @@ export class startScene extends Phaser.Scene{
         createDesertBackground(this, width, height, mid_w, mid_h);
 
         const logo_redditery=this.add.sprite(mid_w, 10, 'ui', 'logo_redditery').setOrigin(.5, 0).setScale(1);
-        const logo_reddit=this.add.sprite(10, 10, 'ui', 'logo_reddit').setOrigin(0, 0).setScale(.5);
+        const logo_reddit=this.add.sprite(10, 10, 'ui', 'logo_reddit').setOrigin(0, 0).setScale(.4).setInteractive().on('pointerdown', () => {
+            this.sound.play('hah');
+        });
         // Efecto heartbeat para logo_reddit
         this.tweens.add({
             targets: logo_reddit,
-            scale: { from: 1, to: 1.05 },
+            scale: { from: .4, to: .5 },
             duration: 1000,
             yoyo: true,
             repeat: -1,

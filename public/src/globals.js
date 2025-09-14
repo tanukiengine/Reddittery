@@ -72,6 +72,7 @@ window.exampleGameConfig={"generalSettings":{"resolution":{"height": 640,"width"
 
 window.playerStats = {
 	name: 'Akkudrak',
+	board: [],
 	avatar: 'avatar_1',
 	score: 12345,
 	reaction: 320 // ms

@@ -10,6 +10,9 @@ import { preloadScene } from "./scenes/preload.js";
 import { startScene } from "./scenes/startScene.js";
 import { howToPlay } from "./scenes/howtoplay.js";
 import { countdown } from "./scenes/coutdown.js";
+import { build_board } from "./scenes/build_board.js";
+
+// Configuración del juego
 
 
 const game = new Phaser.Game({
@@ -31,7 +34,7 @@ const game = new Phaser.Game({
         debug: false,
       },
     },
-    scene: [bootLoader,preloadScene,startScene,elements,animotions,howToPlay,countdown],
+    scene: [bootLoader,preloadScene,startScene,elements,animotions,howToPlay,countdown,build_board],
 })
 
 game.scene.start('bootLoader');
