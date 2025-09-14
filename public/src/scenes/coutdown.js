@@ -45,7 +45,7 @@ export class countdown extends Phaser.Scene{
                 await sleep(800);
                 textObj.setText("");
             }
-            this.scene.start('game');
+            ctx.scene.start('gamescene');
         }
 
         countdownAsync(this);

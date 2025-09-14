@@ -47,36 +47,21 @@ window.btn_money=undefined;//para cambiar el texto de este boton usar btn_money.
 
 window.originScreen=[];//se usa para que el boton de regresar sepa a que escena ir; Revisar elements->showBtnReturn
 
-
-
-// 
-window.exampleGameConfig={"generalSettings":{"resolution":{"height": 640,"width": 450,"fullscreen": false},"sound":{"volume":50},"gameplay":{"language": "en"}},
-"configurationGame":[{"challenges":[{"title":"moreLetters","dificulty":"normal","description":"algo pro"}],
-"categoryGames": [
-	{
-	"category":"Letters","image":"mode_icon_1","status":true,"description":"",
-	"subCategories":[
-	{"title": "Animals","image":"icon_animals","config":[{"fullWord":true,"difficulty":"easy","timeRemaining":30,"random":false,"bonusWord":5,"point":1,"cursedWord":1}],"words": ["DOG","HORSE","CHICKEN","FOX","RACCOON","AXOLOTL","RAT"],"findDifference":["CHICKEN","DOG","HORSE","RACCOON","FOX","RAT","AXOLOTL"],"status": true},
-	{"title": "Planets","image":"icon_planets","config":[{"fullWord":false,"difficulty":"hard","timeRemaining":30,"random":false,"bonusWord":5,"point":1,"cursedWord":1}],"words": ["MERCURY","VENUS","EARTH","MARS","JUPITER","SATURN","URANUS","NEPTUNE"],"status": true},
-	{"title": "Forms","image":"icon_figures","config":[{"fullWord":false,"difficulty":"hard","timeRemaining":30,"random":false,"bonusWord":5,"point":1,"cursedWord":1}],"words": ["CIRCLE","SQUARE","RECTANGULE","OVAL","PENTAGON","DIAMOND","HEXAGON","HEPTAGON","OCTAGON","STAR","CUBE","CYLINDER","CONE","PYRAMID"],"status": true},
-	{"title": "Fruits","image":"icon_fruits","config":[{"fullWord":false,"difficulty":"normal","timeRemaining":30,"random":false,"bonusWord":5,"point":1,"cursedWord":1}],"words": ["APPLE","BANANA","ORANGE","GRAPE","STRAWBERRY","PINEAPPLE","WATERMELON","MANGO","BLUEBERRY","PEAR","CHERRY","LEMON","KIWI","COCONUT"],"status": true},
-	{"title": "Weather","image":"icon_weather","config":[{"fullWord":false,"difficulty":"normal","timeRemaining":30,"random":false,"bonusWord":5,"point":1,"cursedWord":1}],"words": ["SUNNY","CLOUDY","RAINY","SNOWY","WINDY","STORMY","FOGGY","HUMID","DRY","COLD","ICY","DRIZZLY","OVERCAST"],"status": true},
-	{"title": "Weather1","image":"icon_fruits","config":[{"fullWord":false,"difficulty":"normal","timeRemaining":30,"random":false,"bonusWord":5,"point":1,"cursedWord":1}],"words": ["SUNNY","CLOUDY","RAINY","SNOWY","WINDY","STORMY","FOGGY","HUMID","DRY","COLD","ICY","DRIZZLY","OVERCAST"],"status": true},
-	{"title": "Weather2","image":"icon_figures","config":[{"fullWord":false,"difficulty":"normal","timeRemaining":30,"random":false,"bonusWord":5,"point":1,"cursedWord":1}],"words": ["SUNNY","CLOUDY","RAINY","SNOWY","WINDY","STORMY","FOGGY","HUMID","DRY","COLD","ICY","DRIZZLY","OVERCAST"],"status": true},
-	{"title": "Weather3","image":"icon_figures","config":[{"fullWord":false,"difficulty":"normal","timeRemaining":30,"random":false,"bonusWord":5,"point":1,"cursedWord":1}],"words": ["SUNNY","CLOUDY","RAINY","SNOWY","WINDY","STORMY","FOGGY","HUMID","DRY","COLD","ICY","DRIZZLY","OVERCAST"],"status": true},
-
-	]},
-
-	{"category":"Numbers","image":"mode_icon_2","status":false,"description":"","subCategories":[{}]},{"category":"Visuals","image":"mode_icon_3","status":false,"description":"","subCategories":[{}]}]}]};
-
-
+//Este array deberia llenarse desde Redis de reddit
 window.playerStats = {
 	name: 'Akkudrak',
 	board: [],
 	avatar: 'avatar_1',
 	score: 12345,
 	reaction: 320 // ms
-};
+};//Falta guardar, avatars procesados en el juego, y su timing.
+
+// 
+window.exampleGameConfig={"generalSettings":{"resolution":{"height": 640,"width": 450,"fullscreen": false},"sound":{"volume":50},"gameplay":{"language": "en"}},
+"configurationGame":[{"challenges":[{"title":"moreLetters","dificulty":"normal","description":"algo pro"}]}]};
+
+
+
 
 window.sortPlayersByScoreDesc = function(players) {
     return players.slice().sort((a, b) => b.score - a.score);

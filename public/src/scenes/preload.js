@@ -72,6 +72,7 @@ export class preloadScene extends Phaser.Scene{
         const elements = this.scene.get('elements');
         elements.getBackground(this,"bg_main");
         elements.showBtnReturn(this,originScreen);
+        //this.scene.start('build_board');
         this.scene.start('startScene');
     }
 

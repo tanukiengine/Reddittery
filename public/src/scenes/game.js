@@ -1,9 +1,9 @@
 import ArrayWord from "../../assets/js/array-word.js";
 import { createDesertBackground } from './backgroundUtils';
 
-export class build_board extends Phaser.Scene{
+export class gamescene extends Phaser.Scene{
     constructor(){
-        super({key:'build_board'});
+        super({key:'gamescene'});
         this.formattedText = "";
         this.nextWord = "";
         this.scaleToken
@@ -23,21 +23,14 @@ export class build_board extends Phaser.Scene{
     create() {
         const elements = this.scene.get('elements');
 
-        //Texto de titulo
-        this.add.text(mid_w, 80, "Choose your board", {
-            fontFamily: 'Arial',
-            fontSize: '6rem',
-            fill: '#fff',
-            stroke: '#000',
-            strokeThickness: 10,
-        }).setDepth(2).setOrigin(0.5);
+        
 
         const max_size_selection = width * .46;
         const padding = 40;
 
         //container principal, donde se renderizan los avatares, aca puede ir en cualquier coordenada, los elementos se renderinzan dentro de este contenedor
         const selectionBoard = this.add.sprite(
-            mid_w-100,
+            max_size_selection/2+padding,
             mid_h+50,
             "ui",
             'container_square_big'
@@ -51,15 +44,7 @@ export class build_board extends Phaser.Scene{
         const paddingY = 10;
 
         // Función para obtener 9 avatares aleatorios, se asegura de no repetir
-        const getRandomAvatars = () => {
-            const avatars = Array.from({length: totalAvatars}, (_, i) => i + 1); // [1,2,3,...,16]
-            let randomAvatars = [];
-            for (let i = 0; i < avatarsToShow; i++) {
-                const randomIndex = Math.floor(Math.random() * avatars.length);
-                randomAvatars.push("avatar_"+avatars.splice(randomIndex, 1)[0]);
-            }
-            return randomAvatars;
-        };
+
 
         // Función para renderizar avatares, se llama cada vez que se necesita actualizar la cuadrícula
         const renderRandomAvatars = () => {
@@ -69,11 +54,11 @@ export class build_board extends Phaser.Scene{
             this.gridSprites = [];
 
             const grid = gridify(selectionBoard, rows, cols, paddingX, paddingY);
-            const randomAvatars = getRandomAvatars();
+            const randomAvatars = playerStats.board;;
 
             //Aca guardamos el tablero seleccionado en playerStats para usarlo en el juego
+            console.log("Tablero CARGADO desde variable en globals playerStats:", randomAvatars);
             playerStats.board=randomAvatars;
-            console.log("Tablero GUARDADO:", randomAvatars);
 
 
             //Ya tenemos el array randomAvatars con los 9 avatares a mostrar, ahora renderizamos el cuadrado blanco y encima el avatar
@@ -85,7 +70,12 @@ export class build_board extends Phaser.Scene{
                     "ui",
                     'container_square_small'
                 ).setOrigin(.5, .5).setScale(1).setDepth(1)
-                .setDisplaySize(max_size_selection / 3 - paddingX, max_size_selection / 3 - paddingY);
+                .setDisplaySize(max_size_selection / 3 - paddingX, max_size_selection / 3 - paddingY).setInteractive();
+                sprite.on('pointerdown', () => {
+                    this.selectedAvatar = randomAvatars[i];
+                    console.log("Avatar picado, que hacemos ahora?", this.selectedAvatar);
+                    // Aquí puedes agregar lógica adicional para manejar el avatar seleccionado
+                });
 
                 const avatar = this.add.sprite(
                     cell.x + paddingX,
@@ -111,7 +101,7 @@ export class build_board extends Phaser.Scene{
         this.add.text(
             playGameBtn.x,
             playGameBtn.y,
-            'Play Now!',
+            'Finalizar',
             { 
                 fontFamily: 'Arial',
                 fontSize: '2rem', 
@@ -123,35 +113,11 @@ export class build_board extends Phaser.Scene{
 
         // Evento del botón, vamos al countdown, ese mismo countdown al termina ejecuta la escena Game, cambiar si es necesario
         playGameBtn.on('pointerdown', () => {
-            //this.scene.start('gamescene');//Solo para pruebas, el flujo deberia ser primero countdown y luego gamescene
-            this.scene.start('countdown');
+            //Terminamos game si el tablero esta lleno
+            console.log("Juego terminado, este boton no deberia estar aca, pero por ahora sirve para pruebas");
+
         });
 
-
-        //Boton de randomizar
-        const randomizeButton = this.add.sprite(
-            playGameBtn.getTopCenter().x,//Situa el boton al 80% del width
-            playGameBtn.getTopCenter().y - 40,
-            'ui',
-            'btn_1'
-        ).setOrigin(.5, .5).setScale(1.4).setDepth(1).setInteractive();
-        this.add.text(
-            randomizeButton.x,
-            randomizeButton.y,
-            'Randomize',
-            { 
-                fontFamily: 'Arial',
-                fontSize: '1.3rem', 
-                fill: '#fff',
-                stroke: '#000',
-                strokeThickness: 6,
-            }   
-        ).setDepth(2).setOrigin(0.5);
-
-        // Evento del botón
-        randomizeButton.on('pointerdown', () => {
-            renderRandomAvatars();
-        });
 
         // Primera renderización aleatoria
         renderRandomAvatars();
